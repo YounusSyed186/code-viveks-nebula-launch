@@ -5,6 +5,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
+    "build:dev": "next build",
     "lint": "eslint .",
     "start": "next start"
   },
