@@ -41,11 +41,17 @@ const TEAMS = [
 
 export default function TeamsGrid() {
   return (
-    <section className="mb-16">
-      <h2 className="text-3xl font-bold text-slate-900 mb-8">Our Teams</h2>
+    <section className="mb-16 animate-fade-in">
+      <div className="flex items-center gap-3 mb-8">
+        <div className="w-1 h-8 bg-gradient-to-b from-blue-500 to-orange-500 rounded-full"></div>
+        <h2 className="text-3xl font-bold text-slate-900">Our Teams</h2>
+      </div>
+      
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {TEAMS.map((team) => (
-          <TeamCard key={team.id} team={team} />
+        {TEAMS.map((team, index) => (
+          <div key={team.id} style={{ animationDelay: `${index * 0.1}s` }} className="animate-fade-in">
+            <TeamCard team={team} />
+          </div>
         ))}
       </div>
     </section>

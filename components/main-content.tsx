@@ -22,24 +22,24 @@ export default function MainContent({ sidebarExpanded }: MainContentProps) {
   const [activeTab, setActiveTab] = useState("home")
 
   return (
-    <main className={`flex-1 transition-all duration-300 flex flex-col ${sidebarExpanded ? "ml-0" : "ml-0"}`}>
+    <main className="flex-1 flex flex-col rounded-2xl bg-white neumorphic-lg overflow-hidden transition-smooth">
       {/* Top Navigation Tabs */}
-      <div className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-200">
+      <div className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100">
         <div className="flex px-8 gap-8 max-w-full">
           {TABS.map(({ id, label }) => (
             <button
               key={id}
               onClick={() => setActiveTab(id)}
-              className={`px-2 py-4 text-sm font-medium transition-all duration-300 relative group cursor-pointer ${
+              className={`px-4 py-5 text-sm font-semibold transition-smooth relative group cursor-pointer ${
                 activeTab === id ? "text-blue-500" : "text-slate-600 hover:text-orange-500"
               }`}
             >
               {label}
               {activeTab === id && (
-                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full glow-blue"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full glow-blue"></div>
               )}
               {activeTab !== id && (
-                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-transparent group-hover:bg-orange-400 group-hover:glow-orange transition-all duration-300 rounded-full"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-transparent group-hover:bg-orange-500 transition-smooth rounded-full"></div>
               )}
             </button>
           ))}
@@ -47,7 +47,7 @@ export default function MainContent({ sidebarExpanded }: MainContentProps) {
       </div>
 
       {/* Content Area */}
-      <div className="flex-1 overflow-y-auto p-8">
+      <div className="flex-1 overflow-y-auto p-8 bg-gradient-to-br from-slate-50/50 via-white to-blue-50/30">
         <div className="max-w-7xl mx-auto">
           {activeTab === "home" && (
             <>

@@ -20,29 +20,32 @@ const EVENTS = {
 
 export default function EventsSection() {
   return (
-    <section className="space-y-12 py-8">
-      <h2 className="text-3xl font-bold text-slate-900 mb-8">Events</h2>
+    <section className="space-y-12 py-8 animate-fade-in">
+      <div className="flex items-center gap-3">
+        <div className="w-1 h-8 bg-gradient-to-b from-blue-500 to-orange-500 rounded-full"></div>
+        <h2 className="text-3xl font-bold text-slate-900">Events</h2>
+      </div>
 
       <div className="grid md:grid-cols-3 gap-8">
-        <div className="space-y-6">
-          <h3 className="text-xl font-bold text-slate-900 flex items-center gap-2">
-            <span className="w-3 h-3 rounded-full bg-blue-500"></span>
+        <div className="bg-white rounded-2xl p-6 neumorphic-md border border-slate-100">
+          <h3 className="text-xl font-bold text-slate-900 flex items-center gap-3 mb-6">
+            <span className="w-4 h-4 rounded-full bg-blue-500 shadow-md"></span>
             Weekly
           </h3>
           <EventTimeline events={EVENTS.weekly} color="blue" />
         </div>
 
-        <div className="space-y-6">
-          <h3 className="text-xl font-bold text-slate-900 flex items-center gap-2">
-            <span className="w-3 h-3 rounded-full bg-orange-500"></span>
+        <div className="bg-white rounded-2xl p-6 neumorphic-md border border-slate-100">
+          <h3 className="text-xl font-bold text-slate-900 flex items-center gap-3 mb-6">
+            <span className="w-4 h-4 rounded-full bg-orange-500 shadow-md"></span>
             Monthly
           </h3>
           <EventTimeline events={EVENTS.monthly} color="orange" />
         </div>
 
-        <div className="space-y-6">
-          <h3 className="text-xl font-bold text-slate-900 flex items-center gap-2">
-            <span className="w-3 h-3 rounded-full bg-slate-400"></span>
+        <div className="bg-white rounded-2xl p-6 neumorphic-md border border-slate-100">
+          <h3 className="text-xl font-bold text-slate-900 flex items-center gap-3 mb-6">
+            <span className="w-4 h-4 rounded-full bg-slate-400 shadow-md"></span>
             Annual
           </h3>
           <EventTimeline events={EVENTS.annual} color="slate" />

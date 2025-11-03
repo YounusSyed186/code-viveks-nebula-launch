@@ -7,9 +7,9 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: 'CODE VIVEKS | College Tech Club',
+  description: 'A premier tech club dedicated to fostering innovation, collaboration, and excellence in computer science and technology. Join us to build the future.',
+  keywords: 'tech club, coding, programming, innovation, college, student organization, CODE VIVEKS',
 }
 
 export default function RootLayout({
